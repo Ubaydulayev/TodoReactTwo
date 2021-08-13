@@ -54,7 +54,7 @@ const Todo = (props) => {
 
         <div className="d-flex mb-2">
           <Input
-            placeholder="new task"
+            placeholder="Yangi vazifa!"
             className="me-2 toy2"
             value={value}
             onChange={typing}
