@@ -99,7 +99,7 @@ const Item = ({
       )}
 
       {isEdit ? (
-        <div className="d-flex align-items-center">
+        <div className="d-flex align-items-center mb-5">
           <Button onClick={save} className="me-2 fontb">
             <FontAwesomeIcon icon={faSave} />{" "}
           </Button>

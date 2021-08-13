@@ -23,6 +23,13 @@ const HeaderWrapper = styled.div`
   .toy2 {
     background-color: #fff2f2;
     border: none;
+    box-shadow: 0 0 10px pink !important;
+    margin-bottom: 7px;
+    color: #ffa1a1;
+
+    &::placeholder{
+      color: #ffa1a1;
+    }
   }
 
   .iconsButton {
