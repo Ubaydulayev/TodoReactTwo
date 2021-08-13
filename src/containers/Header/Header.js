@@ -45,7 +45,7 @@ const Header = () => {
   return (
     <HeaderWrapper>
       <div className="header">
-        <div className="row p-3">
+        <div className="row p-3 justify-content-between">
           <div className="col-md-3 col-3 d-flex align-items-center">
             <div className="day me-2 ">{day}</div>
             <div className="col-2">
@@ -53,7 +53,7 @@ const Header = () => {
               <div className="year">{year}</div>
             </div>
           </div>
-          <div className="col-md-3 col-3 d-flex align-items-center">
+          <div className="col-md-3 col-4 d-flex align-items-center">
             <div className="hour">{hour}:</div>
             <div className="minutes">{minute}</div>
           </div>

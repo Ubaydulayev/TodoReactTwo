@@ -1,10 +1,10 @@
 import styled from "styled-components";
 
 const HeaderWrapper = styled.div`
-    .row {
+    /* .row {
         display: flex;
         justify-content: space-between;
-    }
+    } */
 
     .day {
         font-size: 35px;
@@ -13,10 +13,10 @@ const HeaderWrapper = styled.div`
         font-size: 25px;
     }
 
-    .Toy {
+    /* .Toy {
         min-height: 400px;
         min-width: 300px;
-    }
+    } */
 `
 
 export default HeaderWrapper;  
