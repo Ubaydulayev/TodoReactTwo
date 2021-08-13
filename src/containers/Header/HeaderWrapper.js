@@ -15,6 +15,7 @@ const HeaderWrapper = styled.div`
 
     .Toy {
         min-height: 400px;
+        min-width: 300px;
     }
 `
 
