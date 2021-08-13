@@ -8,10 +8,15 @@ const HeaderWrapper = styled.div`
 
   .day {
     font-size: 35px;
+    color: #ffa1a1;
+  }
+  .month, .year {
+    color: #ffa1a1;
   }
   .hour,
   .minutes {
     font-size: 25px;
+    color: #ffa1a1;
   }
 
   .Toy {
