@@ -14,6 +14,9 @@ const Body = (props) => {
     dispatch(action);
   };
 
+  onkeydown = (event) => {
+    if (event.keyCode == 13) add();
+}
   return (
     <BodyWrapper>
       <div className="plus">

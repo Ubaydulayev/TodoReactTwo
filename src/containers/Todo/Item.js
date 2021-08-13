@@ -6,6 +6,8 @@ import { Button, Input } from 'reactstrap';
 import { Dropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'reactstrap';
 import styled from 'styled-components';
 
+
+
 const ItemWrapper = styled(ListGroupItem)`
     .completed{
         text-decoration: line-through;
@@ -58,7 +60,7 @@ const Item = ({ value: { title, completed }, index, deleteTask, editTask, up, do
     return (
         <ItemWrapper key={index} tag="a" href="#" action
             onDoubleClick={() => toggleCompleted(index)}
-            className="d-flex align-items-center justify-content-between">
+            className="d-flex align-items-center justify-content-between toy2">
             {isEdit ?
                 <Input value={value} onChange={(e) => setValue(e.target.value)} className="me-3 border-0" />
                 : <span className={`${completed && "completed" || ""}`}>

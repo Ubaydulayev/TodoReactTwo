@@ -6,7 +6,6 @@ import Item from "./Item";
 import Header from "../Header/Header";
 import { SET_VALUE } from "./types";
 import HeaderWrapper from "../Header/HeaderWrapper";
-import Body from "../Body/Body";
 
 const Todo = (props) => {
   const dispatch = useDispatch();
@@ -50,13 +49,13 @@ const Todo = (props) => {
 
   return (
     <HeaderWrapper>
-      <div className="bg-white rounded p-3 shadow Toy">
+      <div className="rounded p-3 shadow Toy">
         <Header />
 
         <div className="d-flex mb-2">
           <Input
             placeholder="new task"
-            className="me-2"
+            className="me-2 toy2"
             value={value}
             onChange={typing}
           />

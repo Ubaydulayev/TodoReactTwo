@@ -50,11 +50,6 @@ const Header = () => {
   return (
     <HeaderWrapper>
       <div className="header">
-        <div className="skip">
-          <Button color="danger" className="skipButton"><FontAwesomeIcon icon={faTimes} className="iconsButton" /></Button>
-          <Button color="warning" className="skipButton"><FontAwesomeIcon icon={faMinus} className="iconsButton" /></Button>
-          <Button color="success" className="skipButton"><FontAwesomeIcon icon={faExpandArrowsAlt} className="iconsButton" /></Button>
-        </div>
         <div className="row p-3 justify-content-between">
           <div className="col-md-10 col-8 col-sm-9 d-flex align-items-center">
             <div className="day me-2 ">{day}</div>

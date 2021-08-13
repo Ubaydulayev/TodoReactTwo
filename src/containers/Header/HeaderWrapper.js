@@ -17,21 +17,12 @@ const HeaderWrapper = styled.div`
   .Toy {
     min-height: 500px;
     min-width: 300px;
+    background-color: #fff2f2;
   }
-
-  .skip {
-    display: flex;
-  }
-
-  .skipButton {
-    padding: 0;
-    margin-right: 5px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
-    height: 18px;
-    width: 18px;
+  
+  .toy2 {
+    background-color: #fff2f2;
+    border: none;
   }
 
   .iconsButton {
