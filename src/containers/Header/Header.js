@@ -53,7 +53,6 @@ const Header = () => {
               <div className="year">{year}</div>
             </div>
           </div>
-          <div className="col-md-3 col-3 center"><h1>Todo</h1></div>
           <div className="col-md-3 col-3 d-flex align-items-center">
             <div className="hour">{hour}:</div>
             <div className="minutes">{minute}</div>
