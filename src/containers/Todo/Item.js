@@ -10,6 +10,32 @@ const ItemWrapper = styled(ListGroupItem)`
     .completed{
         text-decoration: line-through;
     }
+
+    .drop {
+        background-color: yellow;
+    }
+    .btnn{
+        background-color: pink;
+        border: none;
+        outline: none;
+        &:focus, &:hover{
+            background-color: pink;
+        }
+    }
+
+    .fontbtn {
+        color: pink;
+        &:focus, &:hover{
+        background-color: pink;
+            color: white;
+        }
+    }
+
+    .fontb {
+        background-color: pink;
+        border: pink;
+       
+    }
 `
 
 const Item = ({ value: { title, completed }, index, deleteTask, editTask, up, down, toggleCompleted }) => {
@@ -41,25 +67,25 @@ const Item = ({ value: { title, completed }, index, deleteTask, editTask, up, do
 
             {isEdit ?
                 <div className="d-flex align-items-center">
-                    <Button onClick={save} color="success" className="me-2"><FontAwesomeIcon icon={faSave} /> </Button>
-                    <Button onClick={cancel} color="danger"><FontAwesomeIcon icon={faTimes} /> </Button>
+                    <Button onClick={save} className="me-2 fontb"><FontAwesomeIcon icon={faSave}/> </Button>
+                    <Button onClick={cancel} className="fontb"><FontAwesomeIcon icon={faTimes}  /> </Button>
                 </div>
-                : <Dropdown isOpen={dropdownOpen} toggle={toggle}>
-                    <DropdownToggle caret>
+                : <Dropdown isOpen={dropdownOpen} toggle={toggle} >
+                    <DropdownToggle caret className="btnn shadow-none">
                         <FontAwesomeIcon icon={faBars} />
                     </DropdownToggle>
                     <DropdownMenu>
-                        <DropdownItem header>Functions</DropdownItem>
-                        <DropdownItem onClick={() => deleteTask(index)}>
+                        <DropdownItem header  className="fontbtn" >Functions</DropdownItem>
+                        <DropdownItem onClick={() => deleteTask(index)} className="fontbtn" >
                             <FontAwesomeIcon icon={faTrash} /> Delete
                         </DropdownItem>
-                        <DropdownItem onClick={() => { setIsEdit(true) }}>
+                        <DropdownItem onClick={() => { setIsEdit(true) }} className="fontbtn" >
                             <FontAwesomeIcon icon={faEdit} /> Edit
                         </DropdownItem>
-                        <DropdownItem onClick={() => { up(index) }}>
+                        <DropdownItem onClick={() => { up(index) }} className="fontbtn" >
                             <FontAwesomeIcon icon={faArrowUp} /> Up
                         </DropdownItem>
-                        <DropdownItem onClick={() => { down(index) }}>
+                        <DropdownItem onClick={() => { down(index) }} className="fontbtn" >
                             <FontAwesomeIcon icon={faArrowDown} /> Down
                         </DropdownItem>
                     </DropdownMenu>

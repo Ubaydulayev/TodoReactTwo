@@ -1,13 +1,12 @@
-import React, { useState } from "react";
-import { Button, Input } from "reactstrap";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faPlus } from "@fortawesome/free-solid-svg-icons";
+import React from "react";
+import { Input } from "reactstrap";
 import { ListGroup } from "reactstrap";
 import { useDispatch, useSelector } from "react-redux";
 import Item from "./Item";
 import Header from "../Header/Header";
 import { SET_VALUE } from "./types";
 import HeaderWrapper from "../Header/HeaderWrapper";
+import Body from "../Body/Body";
 
 const Todo = (props) => {
   const dispatch = useDispatch();
@@ -19,11 +18,6 @@ const Todo = (props) => {
 
   const typing = (event) => {
     const action = { type: SET_VALUE, payload: event.target.value };
-    dispatch(action);
-  };
-
-  const add = () => {
-    const action = { type: "ADD_TASK", payload: value };
     dispatch(action);
   };
 
@@ -66,9 +60,6 @@ const Todo = (props) => {
             value={value}
             onChange={typing}
           />
-          <Button color="primary" onClick={add}>
-            <FontAwesomeIcon icon={faPlus} />
-          </Button>
         </div>
         <ListGroup>
           {data?.map((value, index) => {

@@ -1,6 +1,11 @@
 import { useEffect, useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import HeaderWrapper from "./HeaderWrapper";
+import React from 'react';
+import { Button } from 'reactstrap';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faTimes, faMinus, faExpand, faExpandAlt, faExpandArrowsAlt } from "@fortawesome/free-solid-svg-icons";
+
 
 const setZero = (n) => (n < 10 ? "0" + n : n);
 
@@ -45,15 +50,20 @@ const Header = () => {
   return (
     <HeaderWrapper>
       <div className="header">
+        <div className="skip">
+          <Button color="danger" className="skipButton"><FontAwesomeIcon icon={faTimes} className="iconsButton" /></Button>
+          <Button color="warning" className="skipButton"><FontAwesomeIcon icon={faMinus} className="iconsButton" /></Button>
+          <Button color="success" className="skipButton"><FontAwesomeIcon icon={faExpandArrowsAlt} className="iconsButton" /></Button>
+        </div>
         <div className="row p-3 justify-content-between">
-          <div className="col-md-3 col-3 d-flex align-items-center">
+          <div className="col-md-10 col-8 col-sm-9 d-flex align-items-center">
             <div className="day me-2 ">{day}</div>
             <div className="col-2">
               <div className="month">{month}</div>
               <div className="year">{year}</div>
             </div>
           </div>
-          <div className="col-md-3 col-4 d-flex align-items-center">
+          <div className="col-md-2 col-4 col-sm-3 d-flex align-items-center">
             <div className="hour">{hour}:</div>
             <div className="minutes">{minute}</div>
           </div>
