@@ -10,7 +10,8 @@ const HeaderWrapper = styled.div`
     font-size: 35px;
     color: #ffa1a1;
   }
-  .month, .year {
+  .month,
+  .year {
     color: #ffa1a1;
   }
   .hour,
@@ -22,17 +23,30 @@ const HeaderWrapper = styled.div`
   .Toy {
     min-height: 500px;
     min-width: 300px;
-    background-color: #fff2f2;
+    background-color: white;
   }
-  
+
+  .toy3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90px;
+    border-radius: 5px;
+    height: 36px;
+    box-shadow: 0 0 10px pink !important;
+    background-color: white;
+    text-align: center;
+    color: #ffa1a1;
+  }
+
   .toy2 {
-    background-color: #fff2f2;
+    background-color: white;
     border: none;
     box-shadow: 0 0 10px pink !important;
     margin-bottom: 7px;
     color: #ffa1a1;
 
-    &::placeholder{
+    &::placeholder {
       color: #ffa1a1;
     }
   }

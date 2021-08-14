@@ -1,11 +1,7 @@
 import { useEffect, useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import HeaderWrapper from "./HeaderWrapper";
-import React from 'react';
-import { Button } from 'reactstrap';
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faTimes, faMinus, faExpand, faExpandAlt, faExpandArrowsAlt } from "@fortawesome/free-solid-svg-icons";
-
+import React from "react";
 
 const setZero = (n) => (n < 10 ? "0" + n : n);
 

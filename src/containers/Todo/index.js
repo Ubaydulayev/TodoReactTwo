@@ -1,10 +1,19 @@
 import React from "react";
 import { Input } from "reactstrap";
 import { ListGroup } from "reactstrap";
+import { Button } from "reactstrap";
 import { useDispatch, useSelector } from "react-redux";
 import Item from "./Item";
 import Header from "../Header/Header";
-import { SET_VALUE } from "./types";
+import {
+  DELETE_ALL,
+  DELETE_TASK,
+  DOWN,
+  EDIT_TASK,
+  SET_VALUE,
+  TOGGLE_COMPLETED,
+  UP,
+} from "./types";
 import HeaderWrapper from "../Header/HeaderWrapper";
 
 const Todo = (props) => {
@@ -21,29 +30,34 @@ const Todo = (props) => {
   };
 
   const deleteTask = (index) => {
-    const action = { type: "DELETE_TASK", payload: index };
+    const action = { type: DELETE_TASK, payload: index };
     dispatch(action);
   };
 
   const editTask = (value, index) => {
-    const action = { type: "EDIT_TASK", payload: { value, index } };
+    const action = { type: EDIT_TASK, payload: { value, index } };
     dispatch(action);
   };
 
   const up = (index) => {
-    const action = { type: "UP", payload: index };
+    const action = { type: UP, payload: index };
     dispatch(action);
   };
 
   const down = (index) => {
-    const action = { type: "DOWN", payload: index };
+    const action = { type: DOWN, payload: index };
     dispatch(action);
   };
 
   const toggleCompleted = (index) => {
     console.log(index, "toggleCompleted");
 
-    const action = { type: "TOGGLE_COMPLETED", payload: index };
+    const action = { type: TOGGLE_COMPLETED, payload: index };
+    dispatch(action);
+  };
+
+  const deleteAll = (index) => {
+    const action = { type: DELETE_ALL, payload: index };
     dispatch(action);
   };
 
@@ -75,6 +89,12 @@ const Todo = (props) => {
             );
           })}
         </ListGroup>
+        <div className="mt-3 d-flex align-items-lg-center justify-content-between">
+          <h5 className="toy3">All : {data.length}</h5>
+          <Button className="fw-bold toy2" onClick={() => deleteAll()}>
+            Clear All
+          </Button>
+        </div>
       </div>
     </HeaderWrapper>
   );

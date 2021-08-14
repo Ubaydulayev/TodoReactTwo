@@ -4,6 +4,7 @@ import { Button } from "reactstrap";
 import { useDispatch, useSelector } from "react-redux";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlus } from "@fortawesome/free-solid-svg-icons";
+import { DELETE_ALL } from "../Todo/types";
 
 const Body = (props) => {
   const dispatch = useDispatch();
@@ -14,9 +15,14 @@ const Body = (props) => {
     dispatch(action);
   };
 
+  const deleteAll = (index) => {
+    const action = { type: DELETE_ALL, payload: index };
+    dispatch(action);
+  };
+
   onkeydown = (event) => {
     if (event.keyCode == 13) add();
-}
+  };
   return (
     <BodyWrapper>
       <div className="plus">

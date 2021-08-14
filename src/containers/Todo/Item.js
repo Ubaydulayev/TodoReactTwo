@@ -109,7 +109,7 @@ const Item = ({
         </div>
       ) : (
         <Dropdown isOpen={dropdownOpen} toggle={toggle}>
-          <DropdownToggle  className="btnn shadow-none">
+          <DropdownToggle className="btnn shadow-none">
             <FontAwesomeIcon icon={faBars} />
           </DropdownToggle>
           <DropdownMenu>
