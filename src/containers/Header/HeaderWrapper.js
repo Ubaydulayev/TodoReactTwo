@@ -28,11 +28,11 @@ const HeaderWrapper = styled.div`
 
   .btom {
     bottom: 10px;
-    left: 100px;
+    left: 50px;
   }
   .bton {
     bottom: 10px;
-    right: 100px;
+    right: 50px;
   }
 
   .toy3 {
