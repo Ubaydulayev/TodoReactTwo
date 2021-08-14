@@ -63,7 +63,7 @@ const Todo = (props) => {
 
   return (
     <HeaderWrapper>
-      <div className="rounded p-3 shadow Toy">
+      <div className="rounded p-3 shadow Toy position-relative">
         <Header />
 
         <div className="d-flex mb-2">
@@ -90,8 +90,8 @@ const Todo = (props) => {
           })}
         </ListGroup>
         <div className="mt-3 d-flex align-items-lg-center justify-content-between">
-          <h5 className="toy3">All : {data.length}</h5>
-          <Button className="fw-bold toy2" onClick={() => deleteAll()}>
+          <h5 className="toy3 btom position-absolute">All : {data.length}</h5>
+          <Button className="fw-bold bton toy2 position-absolute" onClick={() => deleteAll()}>
             Clear All
           </Button>
         </div>

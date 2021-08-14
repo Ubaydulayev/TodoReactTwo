@@ -26,6 +26,15 @@ const HeaderWrapper = styled.div`
     background-color: white;
   }
 
+  .btom {
+    bottom: 10px;
+    left: 100px;
+  }
+  .bton {
+    bottom: 10px;
+    right: 100px;
+  }
+
   .toy3 {
     display: flex;
     justify-content: center;
