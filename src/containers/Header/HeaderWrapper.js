@@ -4,20 +4,29 @@ const HeaderWrapper = styled.div`
   .row {
     display: flex;
     justify-content: space-between;
-  }
+    .day {
+      font-size: 35px;
+      color: #ffa1a1;
+    }
+    .month,
+    .year {
+      color: #ffa1a1;
+    }
+    .hour,
+    .minutes {
+      font-size: 25px;
+      color: #ffa1a1;
+    }
+    .sun, .moon {
+      background-color: white;
+    border: none;
+    box-shadow: 0 0 10px pink !important;
+    color: #ffa1a1;
 
-  .day {
-    font-size: 35px;
-    color: #ffa1a1;
-  }
-  .month,
-  .year {
-    color: #ffa1a1;
-  }
-  .hour,
-  .minutes {
-    font-size: 25px;
-    color: #ffa1a1;
+    &::placeholder {
+      color: #ffa1a1;
+    }
+    }
   }
 
   .Toy {

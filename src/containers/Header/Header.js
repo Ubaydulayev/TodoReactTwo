@@ -2,12 +2,17 @@ import { useEffect, useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import HeaderWrapper from "./HeaderWrapper";
 import React from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faMoon, faSun } from "@fortawesome/free-solid-svg-icons";
+import useDarkMode from "use-dark-mode";
 
 const setZero = (n) => (n < 10 ? "0" + n : n);
 
 const Header = () => {
   const [time, setTime] = useState(new Date());
   const [date, setDate] = useState(new Date());
+
+  const darkMode = useDarkMode(false);
 
   const monthNames = [
     "JAN",
@@ -47,7 +52,7 @@ const Header = () => {
     <HeaderWrapper>
       <div className="header">
         <div className="row p-3 justify-content-between">
-          <div className="col-md-10 col-8 col-sm-9 d-flex align-items-center">
+          <div className="col-md-8 col-4 col-sm-6 d-flex align-items-center">
             <div className="day me-2 ">{day}</div>
             <div className="col-2">
               <div className="month">{month}</div>
@@ -57,6 +62,17 @@ const Header = () => {
           <div className="col-md-2 col-4 col-sm-3 d-flex align-items-center">
             <div className="hour">{hour}:</div>
             <div className="minutes">{minute}</div>
+          </div>
+          <div className="col-md-2 col-4 col-sm-3 d-flex align-items-center">
+            {darkMode.value ? (
+              <button className="btn sun" onClick={darkMode.disable}>
+                <FontAwesomeIcon icon={faSun} />
+              </button>
+            ) : (
+              <button className="btn moon" onClick={darkMode.enable}>
+                <FontAwesomeIcon  icon={faMoon} /> 
+              </button>
+            )}
           </div>
         </div>
       </div>
